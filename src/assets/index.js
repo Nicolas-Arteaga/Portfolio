@@ -16,14 +16,10 @@ import react from "./tech/react.png";
 import nestjs from "./tech/nestjs.png";
 import postgresql from "./tech/postgresql.png";
 import sqlserver from "./tech/sqlserver.png";
-import redis from "./tech/redis.png";
 import docker from "./tech/docker.png";
-import git from "./tech/git.png";
 import gitlab from "./tech/gitlab.png";
 import dokploy from "./tech/dokploy.png";
-import portainer from "./tech/portainer.png";
 import n8n from "./tech/n8n.png";
-import threejs from "./tech/threejs.png";
 
 import metrodev from "./company/metrodev.png";
 import ctoweb from "./company/ctoweb.png";
@@ -52,14 +48,10 @@ export {
   nestjs,
   postgresql,
   sqlserver,
-  redis,
   docker,
-  git,
   gitlab,
   dokploy,
-  portainer,
   n8n,
-  threejs,
   metrodev,
   ctoweb,
   nocountry,
