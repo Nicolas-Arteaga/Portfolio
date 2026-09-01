@@ -143,7 +143,7 @@ const projects = [
       { name: "multi-tenant", color: "pink-text-gradient" },
     ],
     image: comprasB2B,
-    source_code_link: "https://www.linkedin.com/in/nicolasarteagadev",
+    source_code_link: "https://b2b.kavehome.com",
   },
   {
     name: "E-commerce de Vinos + Sommelier",
@@ -155,7 +155,7 @@ const projects = [
       { name: "Payway", color: "pink-text-gradient" },
     ],
     image: ecommerceVinos,
-    source_code_link: "https://www.linkedin.com/in/nicolasarteagadev",
+    source_code_link: "https://winepassport.com.ar",
   },
   {
     name: "Gestión Gastronómica / Food-cost",
@@ -167,7 +167,7 @@ const projects = [
       { name: "PostgreSQL", color: "pink-text-gradient" },
     ],
     image: gastronomia,
-    source_code_link: "https://www.linkedin.com/in/nicolasarteagadev",
+    source_code_link: "https://app.mirasoles-srl.com",
   },
   {
     name: "Fintech Inmobiliaria — Pago de Cuotas",
@@ -179,7 +179,7 @@ const projects = [
       { name: "Mercado Pago", color: "pink-text-gradient" },
     ],
     image: inmobiliaria,
-    source_code_link: "https://www.linkedin.com/in/nicolasarteagadev",
+    source_code_link: "https://novalis.metrodev.ar",
   },
 ];
 
