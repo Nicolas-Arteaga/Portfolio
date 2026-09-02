@@ -140,7 +140,7 @@ const projects = [
   {
     name: "Atajo — Compras B2B",
     description:
-      "Plataforma multi-tenant de compras B2B: campañas de cotización enviadas por email, portal de proveedores, adjudicación por ítem e ingesta automática de respuestas (n8n). Alta de clientes con subdominio propio.",
+      "Compras B2B multi-tenant: campañas de cotización por email, portal de proveedores, adjudicación por ítem e ingesta de respuestas con n8n.",
     tags: [
       { name: ".NET / ABP", color: "blue-text-gradient" },
       { name: "Angular", color: "green-text-gradient" },
@@ -150,9 +150,9 @@ const projects = [
     source_code_link: "https://app.atajox.com",
   },
   {
-    name: "Portal B2B — Migración Navision",
+    name: "Portal B2B (Navision → ABP)",
     description:
-      "Portal B2B para mercado europeo: migración de un ERP Navision a arquitectura ABP, con gestión de catálogos, pricing y reglas de negocio multi-país.",
+      "Migración de un ERP Navision a arquitectura ABP: catálogos, pricing y reglas de negocio configurables por país, para mercado europeo.",
     tags: [
       { name: ".NET / ABP", color: "blue-text-gradient" },
       { name: "Angular", color: "green-text-gradient" },
@@ -162,9 +162,9 @@ const projects = [
     source_code_link: "https://b2b.kavehome.com",
   },
   {
-    name: "E-commerce de Vinos + Sommelier",
+    name: "E-commerce de Vinos",
     description:
-      "Tienda online con catálogo, carrito asistido por un sommelier y checkout con la pasarela Payway/Decidir: detección de marca de tarjeta por BIN y ambientes por configuración.",
+      "Catálogo y carrito asistido por un sommelier, con checkout Payway/Decidir: marca de tarjeta por BIN y ambientes por configuración.",
     tags: [
       { name: ".NET", color: "blue-text-gradient" },
       { name: "Angular", color: "green-text-gradient" },
@@ -174,9 +174,9 @@ const projects = [
     source_code_link: "https://winepassport.com.ar",
   },
   {
-    name: "Gestión Gastronómica / Food-cost",
+    name: "Gestión Gastronómica",
     description:
-      "Planificación de menús, control de stock por depósito, órdenes de compra y KPIs de costo por comensal. Backend NestJS + React sobre PostgreSQL.",
+      "Planificación de menús, stock por depósito, órdenes de compra y KPIs de costo por comensal. Backend NestJS + React sobre Postgres.",
     tags: [
       { name: "NestJS", color: "blue-text-gradient" },
       { name: "React", color: "green-text-gradient" },
@@ -186,9 +186,9 @@ const projects = [
     source_code_link: "https://app.mirasoles-srl.com",
   },
   {
-    name: "Fintech Inmobiliaria — Pago de Cuotas",
+    name: "Fintech Inmobiliaria",
     description:
-      "Flujo de aprobación de créditos con firma digital, auditoría de etapas y pago de cuotas integrando Mercado Pago (Checkout API).",
+      "Aprobación de créditos con firma digital, auditoría de etapas y pago de cuotas vía Mercado Pago (Checkout API). Stack NestJS + React.",
     tags: [
       { name: "NestJS", color: "blue-text-gradient" },
       { name: "React", color: "green-text-gradient" },

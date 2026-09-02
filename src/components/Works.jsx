@@ -24,7 +24,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 1000,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-[540px] overflow-hidden'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -48,8 +48,12 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white font-bold text-[22px] leading-[28px] min-h-[56px]'>
+            {name}
+          </h3>
+          <p className='mt-2 text-secondary text-[14px] leading-[22px] h-[112px] overflow-hidden'>
+            {description}
+          </p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
