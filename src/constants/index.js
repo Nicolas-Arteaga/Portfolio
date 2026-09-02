@@ -1,6 +1,5 @@
 import {
-  backend,
-  web,
+  payments,
   dotnet,
   csharp,
   abp,
@@ -45,7 +44,7 @@ const services = [
   },
   {
     title: "Integración de Pagos",
-    icon: backend,
+    icon: payments,
   },
   {
     title: "CI/CD & DevOps",
