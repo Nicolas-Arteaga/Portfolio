@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -13,55 +12,37 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    company: "", // honeypot
   });
 
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Nicolás Arteaga",
-          from_email: form.email,
-          to_email: "nicolasarteagadev@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("¡Gracias! Te voy a responder lo antes posible.");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+      if (!res.ok) throw new Error("request failed");
 
-          alert("Ups, algo salió mal. Probá de nuevo.");
-        }
-      );
+      setLoading(false);
+      alert("¡Gracias! Te voy a responder lo antes posible.");
+      setForm({ name: "", email: "", message: "", company: "" });
+    } catch (err) {
+      setLoading(false);
+      console.error(err);
+      alert("Ups, algo salió mal. Probá de nuevo o escribime a nicolasarteagadev@gmail.com");
+    }
   };
 
   return (
@@ -87,7 +68,8 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="¿Cómo te llamás?"
+              placeholder='¿Cómo te llamás?'
+              required
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -98,7 +80,8 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="¿Cuál es tu email?"
+              placeholder='¿Cuál es tu email?'
+              required
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -110,13 +93,27 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='¿Qué querés decir?'
+              required
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
+          {/* honeypot anti-spam: oculto para humanos, tentador para bots */}
+          <input
+            type='text'
+            name='company'
+            value={form.company}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete='off'
+            className='hidden'
+            aria-hidden='true'
+          />
+
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            disabled={loading}
+            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary disabled:opacity-60'
           >
             {loading ? "Enviando..." : "Enviar"}
           </button>

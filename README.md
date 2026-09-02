@@ -1,10 +1,20 @@
 # Portfolio — Nicolás Arteaga
 
-Sitio personal. React + Vite + three.js (base: JavaScript Mastery 3D portfolio, MIT).
+React + Vite + three.js (base: JavaScript Mastery 3D portfolio, MIT).
 
 ```bash
 npm install
 npm run dev
 ```
 
-Contacto (EmailJS) via variables de entorno: VITE_APP_EMAILJS_SERVICE_ID, VITE_APP_EMAILJS_TEMPLATE_ID, VITE_APP_EMAILJS_PUBLIC_KEY
+## Formulario de contacto
+
+El form postea a `/api/contact` (Vercel Serverless Function, `api/contact.js`),
+que envía el mensaje por **Resend** a nicolasarteagadev@gmail.com.
+
+Requiere en Vercel la env var (Production + Preview):
+
+    RESEND_API_KEY = re_xxxxxxxx   (de resend.com/api-keys)
+
+Remitente: `onboarding@resend.dev` (sandbox de Resend, no requiere dominio
+propio porque el destino es la casilla dueña de la cuenta).
