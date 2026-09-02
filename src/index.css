@@ -19,6 +19,28 @@
   display: block;
 }
 
+/* --- Vertical timeline polish --- */
+.vertical-timeline-element-date {
+  color: #aaa6c3 !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+}
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+    padding: 0.8em 1.5em !important;
+  }
+}
+.vertical-timeline-element-content {
+  padding: 1.75em 2em !important;
+}
+.vertical-timeline-element {
+  margin: 1.5em 0 !important;
+}
+.vertical-timeline::before {
+  width: 2px !important;
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(

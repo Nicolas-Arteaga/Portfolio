@@ -7,7 +7,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
+const ServiceCard = ({ index, title, desc, icon }) => (
   <Tilt
     className='xs:w-[250px] w-full'
     options={{ max: 8, scale: 1, speed: 1000 }}
@@ -16,16 +16,18 @@ const ServiceCard = ({ index, title, icon }) => (
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
-      <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
+      <div className='bg-tertiary rounded-[20px] py-8 px-6 min-h-[260px] flex flex-col items-center gap-4'>
+        <div className='w-16 h-16 rounded-2xl bg-black-100 flex items-center justify-center'>
+          <img src={icon} alt={title} className='w-10 h-10 object-contain' />
+        </div>
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
+        <h3 className='text-white text-[18px] font-bold text-center'>{title}</h3>
+
+        {desc && (
+          <p className='text-secondary text-[13px] text-center leading-[20px]'>
+            {desc}
+          </p>
+        )}
       </div>
     </motion.div>
   </Tilt>

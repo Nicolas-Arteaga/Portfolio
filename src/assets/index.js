@@ -22,6 +22,7 @@ import metrodev from "./company/metrodev.png";
 import ctoweb from "./company/ctoweb.png";
 import nocountry from "./company/nocountry.png";
 
+import atajo from "./projects/atajo.svg";
 import comprasB2B from "./projects/compras-b2b.svg";
 import ecommerceVinos from "./projects/ecommerce-vinos.svg";
 import gastronomia from "./projects/gastronomia.svg";
@@ -49,6 +50,7 @@ export {
   metrodev,
   ctoweb,
   nocountry,
+  atajo,
   comprasB2B,
   ecommerceVinos,
   gastronomia,

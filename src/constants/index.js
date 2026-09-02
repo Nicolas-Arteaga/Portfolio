@@ -16,6 +16,7 @@ import {
   metrodev,
   ctoweb,
   nocountry,
+  atajo,
   comprasB2B,
   ecommerceVinos,
   gastronomia,
@@ -40,18 +41,22 @@ export const navLinks = [
 const services = [
   {
     title: "Full-Stack .NET / ABP",
+    desc: "APIs y frontend Angular, arquitectura modular por capas",
     icon: dotnet,
   },
   {
     title: "Integración de Pagos",
+    desc: "Payway/Decidir y Mercado Pago en producción",
     icon: payments,
   },
   {
     title: "CI/CD & DevOps",
+    desc: "Deploy automático dev/prod, Docker, Dokploy y Portainer",
     icon: dokploy,
   },
   {
     title: "Automatización (n8n)",
+    desc: "Flujos, ingesta de emails y OCR de documentos",
     icon: n8n,
   },
 ];
@@ -133,13 +138,25 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Plataforma de Compras B2B",
+    name: "Atajo — Compras B2B",
     description:
-      "Sistema multi-tenant para el sector salud: campañas de cotización, adjudicación por ítem, portal de proveedores y alta de clientes con subdominio propio y DNS wildcard.",
+      "Plataforma multi-tenant de compras B2B: campañas de cotización enviadas por email, portal de proveedores, adjudicación por ítem e ingesta automática de respuestas (n8n). Alta de clientes con subdominio propio.",
     tags: [
       { name: ".NET / ABP", color: "blue-text-gradient" },
       { name: "Angular", color: "green-text-gradient" },
-      { name: "multi-tenant", color: "pink-text-gradient" },
+      { name: "n8n", color: "pink-text-gradient" },
+    ],
+    image: atajo,
+    source_code_link: "https://app.atajox.com",
+  },
+  {
+    name: "Portal B2B — Migración Navision",
+    description:
+      "Portal B2B para mercado europeo: migración de un ERP Navision a arquitectura ABP, con gestión de catálogos, pricing y reglas de negocio multi-país.",
+    tags: [
+      { name: ".NET / ABP", color: "blue-text-gradient" },
+      { name: "Angular", color: "green-text-gradient" },
+      { name: "multi-país", color: "pink-text-gradient" },
     ],
     image: comprasB2B,
     source_code_link: "https://b2b.kavehome.com",
