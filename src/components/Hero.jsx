@@ -18,10 +18,14 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hola, soy <span className='text-[#915EFF]'>Nicolás</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100 max-w-[600px]`}>
+          <p className={`${styles.heroSubText} mt-2 text-white-100 max-w-[460px]`}>
             Desarrollador Full-Stack — .NET · Angular · ABP.
-            <br className='sm:block hidden' />
-            Pasarelas de pago + infraestructura (CI/CD).
+            <br />
+            Pasarelas de pago
+            <br />
+            Infraestructura
+            <br />
+            (CI/CD)
           </p>
         </div>
       </div>
