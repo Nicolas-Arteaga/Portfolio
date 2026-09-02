@@ -96,7 +96,7 @@ const experiences = [
     title: "Full-Stack Developer (Freelance)",
     company_name: "CTO Web — Chief Technology Officer Web",
     icon: ctoweb,
-    iconBg: "#E6DEDD",
+    iconBg: "#0a1526",
     date: "Ene 2024 - Presente",
     points: [
       "Estudio propio de desarrollo web: sitios institucionales, landing pages y e-commerce para PyMEs.",
