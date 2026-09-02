@@ -3,10 +3,9 @@
 // servidor (env var RESEND_API_KEY), nunca llega al navegador.
 
 const TO = "nicolasmarceloarteaga@gmail.com";
-// Remitente: dominio sandbox de Resend. No requiere verificar ningún dominio
-// porque el destino es la propia casilla. Si algún día se verifica un dominio
-// propio en Resend, cambiar este valor por algo como "web@tudominio.com".
-const FROM = "Portfolio <onboarding@resend.dev>";
+// Remitente sobre un dominio verificado en Resend (workspace MetroDev):
+// permite entregar a cualquier casilla, no solo a la dueña de la cuenta.
+const FROM = "Portfolio Nicolás <portfolio@mail.novalis.metrodev.ar>";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
