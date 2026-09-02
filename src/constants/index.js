@@ -94,14 +94,15 @@ const experiences = [
   },
   {
     title: "Full-Stack Developer (Freelance)",
-    company_name: "CTO Web — Remoto",
+    company_name: "CTO Web — Chief Technology Officer Web",
     icon: ctoweb,
     iconBg: "#E6DEDD",
     date: "Ene 2024 - Presente",
     points: [
-      "Desarrollo de soluciones web full-stack para clientes.",
-      "Diseño e implementación de APIs y frontend en Angular.",
-      "Despliegue y mantenimiento de aplicaciones productivas.",
+      "Estudio propio de desarrollo web: sitios institucionales, landing pages y e-commerce para PyMEs.",
+      "Proyectos de punta a punta: diseño, frontend (React / Angular), APIs y despliegue (Vercel).",
+      "Metodología ágil; integración de medios de pago y automatizaciones según el cliente.",
+      "Captación por WhatsApp / Instagram y soporte post-lanzamiento.",
     ],
   },
   {
