@@ -41,7 +41,7 @@ const Contact = () => {
     } catch (err) {
       setLoading(false);
       console.error(err);
-      alert("Ups, algo salió mal. Probá de nuevo o escribime a nicolasarteagadev@gmail.com");
+      alert("Ups, algo salió mal. Probá de nuevo o escribime a nicolasmarceloarteaga@gmail.com");
     }
   };
 

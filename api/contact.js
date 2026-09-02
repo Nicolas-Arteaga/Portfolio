@@ -2,7 +2,7 @@
 // directo a la casilla de Nicolás vía Resend. La API key vive solo en el
 // servidor (env var RESEND_API_KEY), nunca llega al navegador.
 
-const TO = "nicolasarteagadev@gmail.com";
+const TO = "nicolasmarceloarteaga@gmail.com";
 // Remitente: dominio sandbox de Resend. No requiere verificar ningún dominio
 // porque el destino es la propia casilla. Si algún día se verifica un dominio
 // propio en Resend, cambiar este valor por algo como "web@tudominio.com".

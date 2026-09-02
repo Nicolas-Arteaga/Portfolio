@@ -10,7 +10,7 @@ npm run dev
 ## Formulario de contacto
 
 El form postea a `/api/contact` (Vercel Serverless Function, `api/contact.js`),
-que envía el mensaje por **Resend** a nicolasarteagadev@gmail.com.
+que envía el mensaje por **Resend** a nicolasmarceloarteaga@gmail.com.
 
 Requiere en Vercel la env var (Production + Preview):
 
